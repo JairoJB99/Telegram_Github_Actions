@@ -2,7 +2,7 @@ require("dotenv").config
 const Bot = require('node-telegram-bot-api');
 const {
     INPUT_STATUS: ipstatus,
-    INPUT_TOKEN: tgtoken,//Telegram api token
+    INPUT_TOKEN: tgtoken,//Telegram api token s
     INPUT_CHAT: chatid,// Telegram Chat ID
     INPUT_IU_TITLE: ititle,// Issue title
     INPUT_IU_NUM: inum,// Issue Number
@@ -20,3 +20,5 @@ const {
 } = process.env;
 
 const bot = new Bot(tgtoken)
+
+console.log("holllliiiii");

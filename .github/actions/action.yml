@@ -14,9 +14,6 @@ inputs:
   message_file:
     description: "overwrite the default message template with the contents of the specified file"
     required: false
-  socks5:
-    description: "support socks5 proxy URL"
-    required: false
   photo:
     description: "send the photo message."
     required: false
