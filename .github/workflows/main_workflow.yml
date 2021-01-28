@@ -48,7 +48,7 @@ jobs:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: Ahora te mandaré una video
-        video: './tests/video.mp4'
+        video: './tests/video.mp4' 
 
     - name: send audio message
       uses: ./
