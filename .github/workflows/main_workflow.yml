@@ -12,7 +12,7 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        args: The ${{ github.event_name }} event triggered first step.
+        args: El ${{ github.event_name }} a inciado el primer Step.
 
     - name: send message useing with
       uses: ./
@@ -20,12 +20,12 @@ jobs:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: |
-          The ${{ github.event_name }} event triggered second step.
-          show the github varable ref: ${{ github.ref }}
-          show the github varable commit: ${{ github.sha }}
-          show the github varable ref: {{ commit.ref }}
-          show the github varable commit: {{ commit.sha }}
-          Commit Message: ${{ github.event.head_commit.message }}
+          El ${{ github.event_name }} a inciado el segundo Step.
+          REF: ${{ github.ref }}
+          COMMIT: ${{ github.sha }}
+          COMMIT REF: {{ commit.ref }}
+          COMMIT SHA: {{ commit.sha }}
+          COMMIT MESSAGE: ${{ github.event.head_commit.message }}
 
     - name: send default message
       uses: ./
@@ -38,7 +38,7 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        message: send photo message
+        message: Ahora te mandaré una foto
         photo: './tests/github.png'
         document: './tests/gophercolor.png'
 
@@ -47,8 +47,8 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        location: '24.9163213 121.1424972'
-        venue: '35.661777 139.704051 竹北體育館 新竹縣竹北市'
+        location: '38.781779552388905, -0.4444032729369581'
+        venue: 'Avendida Valencia 57 Muro de Alcoy'
 
     - name: send custom message
       uses: ./
@@ -56,7 +56,7 @@ jobs:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: |
-          The ${{ github.event_name }} event triggered final step.
+          El ${{ github.event_name }} a inciado el último Step.
           echo This event is a pull request that had an assignee removed.
 
     - name: send message file
@@ -90,7 +90,7 @@ jobs:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: |
-          show link preview https://google.com.tw
+          Mostrar preview del enlace https://google.com.tw
 
     - name: disable link preview
       uses: ./
@@ -99,4 +99,4 @@ jobs:
         token: ${{ secrets.TELEGRAM_TOKEN }}
         disable_web_page_preview: true
         message: |
-          disable link preview https://google.com.tw
+          Deshabilitar preview del enlace https://google.com.tw
