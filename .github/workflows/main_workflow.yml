@@ -42,13 +42,29 @@ jobs:
         photo: './tests/github.png'
         document: './tests/gophercolor.png'
 
+    - name: send video message
+      uses: ./
+      with:
+        to: ${{ secrets.TELEGRAM_TO }}
+        token: ${{ secrets.TELEGRAM_TOKEN }}
+        message: Ahora te mandaré una video
+        video: './tests/video.mp4'
+
+    - name: send audio message
+      uses: ./
+      with:
+        to: ${{ secrets.TELEGRAM_TO }}
+        token: ${{ secrets.TELEGRAM_TOKEN }}
+        message: Ahora te mandaré una audio
+        video: './tests/audio.mp3'    
+
     - name: send location message
       uses: ./
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         location: '38.781779552388905, -0.4444032729369581'
-        venue: 'Avendida Valencia 57 Muro de Alcoy'
+        venue: '38.781779552388905, -0.4444032729369581'
 
     - name: send custom message
       uses: ./
