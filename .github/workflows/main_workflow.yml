@@ -10,14 +10,14 @@ jobs:
     - name: send custom message with args
       uses: ./
       with:
-        to: ${{ secrets.TELEGRAM_TO }}
+        to: ${{ secrets.TELEGRAM_GROUP}}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         args: El ${{ github.event_name }} a inciado el primer Step.
 
     - name: send message useing with
       uses: ./
       with:
-        to: ${{ secrets.TELEGRAM_TO }}
+        to: ${{ secrets.TELEGRAM_GROUP}}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: |
           El ${{ github.event_name }} a inciado el segundo Step.
@@ -30,13 +30,13 @@ jobs:
     - name: send default message
       uses: ./
       with:
-        to: ${{ secrets.TELEGRAM_TO }}
+        to: ${{ secrets.TELEGRAM_GROUP}}
         token: ${{ secrets.TELEGRAM_TOKEN }}
 
     - name: send photo message
       uses: ./
       with:
-        to: ${{ secrets.TELEGRAM_TO }}
+        to: ${{ secrets.TELEGRAM_GROUP}}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: Ahora te mandaré una foto
         photo: './tests/github.png'
@@ -45,7 +45,7 @@ jobs:
     - name: send video message
       uses: ./
       with:
-        to: ${{ secrets.TELEGRAM_TO }}
+        to: ${{ secrets.TELEGRAM_GROUP}}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: Ahora te mandaré una video
         video: './tests/video.mp4' 
@@ -53,7 +53,7 @@ jobs:
     - name: send audio message
       uses: ./
       with:
-        to: ${{ secrets.TELEGRAM_TO }}
+        to: ${{ secrets.TELEGRAM_GROUP}}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: Ahora te mandaré una audio
         video: './tests/audio.mp3' 
@@ -61,7 +61,7 @@ jobs:
     - name: send location message
       uses: ./
       with:
-        to: ${{ secrets.TELEGRAM_TO }}
+        to: ${{ secrets.TELEGRAM_GROUP}}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         location: '38.781779552388905 -0.4444032729369581'
         venue: '38.781779552388905 -0.4444032729369581'
@@ -69,7 +69,7 @@ jobs:
     - name: send custom message
       uses: ./
       with:
-        to: ${{ secrets.TELEGRAM_TO }}
+        to: ${{ secrets.TELEGRAM_GROUP}}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: |
           El ${{ github.event_name }} a inciado el último Step.
@@ -78,14 +78,14 @@ jobs:
     - name: send message file
       uses: ./
       with:
-        to: ${{ secrets.TELEGRAM_TO }}
+        to: ${{ secrets.TELEGRAM_GROUP}}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message_file: tests/message.txt
 
     # - name: send message using socks5 proxy URL
     #   uses: appleboy/telegram-action@master
     #   with:
-    #     to: ${{ secrets.TELEGRAM_TO }}
+    #     to: ${{ secrets.TELEGRAM_GROUP}}
     #     token: ${{ secrets.TELEGRAM_TOKEN }}
     #     socks5: "http://222.124.154.19:23500"
     #     message: Send message from socks5 proxy URL.
@@ -93,7 +93,7 @@ jobs:
     # - name: try multiple message
     #   uses: appleboy/telegram-action@master
     #   with:
-    #     to: ${{ secrets.TELEGRAM_TO }}
+    #     to: ${{ secrets.TELEGRAM_GROUP}}
     #     token: ${{ secrets.TELEGRAM_TOKEN }}
     #     format: html
     #     message: |
@@ -103,7 +103,7 @@ jobs:
     - name: link preview
       uses: ./
       with:
-        to: ${{ secrets.TELEGRAM_TO }}
+        to: ${{ secrets.TELEGRAM_GROUP}}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: |
           Mostrar preview del enlace https://google.com.tw
@@ -111,7 +111,7 @@ jobs:
     - name: disable link preview
       uses: ./
       with:
-        to: ${{ secrets.TELEGRAM_TO }}
+        to: ${{ secrets.TELEGRAM_GROUP}}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         disable_web_page_preview: true
         message: |
