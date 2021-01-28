@@ -45,7 +45,7 @@ jobs:
     - name: send video message
       uses: ./
       with:
-        to: ${{ secrets.TELEGRAM_GROUP}}
+        to: ${{ secrets.TELEGRAM_GROUP }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: Ahora te mandaré una video
         video: './tests/video.mp4'
@@ -53,7 +53,7 @@ jobs:
     - name: send audio message
       uses: ./
       with:
-        to: ${{ secrets.TELEGRAM_GROUP}}
+        to: ${{ secrets.TELEGRAM_GROUP }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: Ahora te mandaré una audio
         video: './tests/audio.mp3'    
