@@ -64,7 +64,6 @@ jobs:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         location: '38.781779552388905, -0.4444032729369581'
-        venue: '38.781779552388905, -0.4444032729369581'
 
     - name: send custom message
       uses: ./
