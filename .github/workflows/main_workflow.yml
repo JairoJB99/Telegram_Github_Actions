@@ -56,7 +56,7 @@ jobs:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: Ahora te mandaré una audio
-        video: './tests/audio.mp3'  
+        video: './tests/audio.mp3' 
 
     - name: send location message
       uses: ./
