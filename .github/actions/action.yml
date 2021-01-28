@@ -51,8 +51,8 @@ inputs:
     description: "disables link previews for links in this message"
     required: false
 runs:
-  using: "docker"
-  image: "../../Dockerfile"
+   using: "node12"
+   main: "dist/index.js"  #se ponde dist por que vercel mimifica
 
 branding:
   icon: "message-square"
